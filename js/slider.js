@@ -160,6 +160,7 @@ function slider () {
             arrows: true,
             infinite: false,
             speed: 500,
+            rows: 2,
             autoplay: false,
             slidesToShow: 4,
             slidesToScroll: 4,

@@ -836,7 +836,13 @@ hr{
         bottom: 15px;
         margin: auto;
     }
-
+    .screen_block {
+        position: relative;
+    }
+    #slide2 {
+        min-height: 840px;
+        background-color:rgb( 238, 250, 252 );
+    }
 }
 @media (max-width: 1200px){
     .item_name_text {
@@ -847,7 +853,6 @@ hr{
     .screen_block .container{
         top:50%;
         position: absolute;
-
         transform: translatey(-50%);
     }
     .item_name{
