@@ -1,0 +1,391 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>ГумаАгроТех</title>
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/jquery.slick/1.6.0/slick.css"/>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/styles.css" rel="stylesheet">
+</head>
+<body id="no_scroll">
+<!-- Modals -->
+<div class="modal right fade" id="myModal2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel2">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-body" id="more_info_body">
+                <span id="close_add" class="glyphicon glyphicon-remove " data-dismiss="modal" aria-label="Close"></span>
+                <form action="https://hooks.zapier.com/hooks/catch/1960624/hiu2w0/"  method="POST" id="connect">
+                    <p style="text-align: center">Стати партнером</p>
+                    <label>Ім'я та по-батькові</label>
+                    <input type="text" name="name" required/>
+                    <label>Ваш email </label>
+                    <input type="email" name="email" required/>
+                    <label>Номер телефону</label>
+                    <input type="tel" name="phone" required/>
+                    <label>Текст повідомлення</label>
+                    <input type="text" name="msg" required/>
+                    <div style="text-align: center">
+                        <button class="send" type="submit">ВІДПРАВИТИ</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div><div class="modal right fade" id="myModal3" tabindex="-1" role="dialog" aria-labelledby="myModalLabel2">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-body" id="more_info_body">
+                <span id="close_add" class="glyphicon glyphicon-remove " data-dismiss="modal" aria-label="Close"></span>
+                <form action="https://hooks.zapier.com/hooks/catch/1960624/hiu9sp/" method="POST" id="connect">
+                    <p style="text-align: center">Зворотній зв'язок</p>
+                    <label>Ім'я та по-батькові</label>
+                    <input type="text" name="name" required/>
+                    <label>Ваш email </label>
+                    <input type="email" name="email" required/>
+                    <label>Номер телефону</label>
+                    <input type="tel" name="phone" required/>
+                    <label>Текст повідомлення</label>
+                    <input type="text" name="msg" required/>
+                    <div style="text-align: center">
+                        <button class="send" type="submit">ВІДПРАВИТИ</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal" id="myModal1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel2">
+    <div class="modal-dialog  modal-lg" role="document">
+        <div class="modal-content ">
+            <div id="more" class="modal-body">
+                <a data-dismiss="modal" aria-label="Close">
+                    <span>Закрити</span>
+                    <span class="glyphicon glyphicon-remove"></span></a>
+                <div class="col-md-6 col-lg-offset-2 col-lg-5">
+                    <div id="forslider">
+                        <img src="./images/slide2.png" />
+                    </div>
+                    <div id="slider_min">
+                        <img class="min_slid_active" src="./images/slide2.png"/>
+                        <img src="./images/slide1.png"/>
+                    </div>
+                </div>
+                <div id="more_info" class="col-md-6 col-lg-5">
+                    <h1></h1>
+                    <div id="more_info_text">
+                        <h2></h2>
+                        <p></p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+<nav id="primary-menu">
+    <span class="glyphicon glyphicon-remove" id="menu_close" onclick="closeNav()"></span>
+    <span id="menu_open" class="glyphicon glyphicon-menu-hamburger" onclick="openNav()"></span>
+    <div class="container" style="position: relative">
+        <img id="logo" src="images/Logo.svg"/>
+        <ul class="menu_links">
+            <li class="active_menu"><a href="#slide1">Про нас</a></li>
+            <li><a href="#slide2">Каталог товарів</a></li>
+            <li><a href="#slide3">Партнери</a></li>
+            <li><a href="#slide4">Контакти</a></li>
+        </ul>
+        <div class="tellnumb">
+            <p><img src="images/tell.png"/>068 588 55 44</p>
+            <p><img src="images/tell.png"/>067 496 67 77</p>
+        </div>
+    </div>
+</nav>
+<!--Mobile Menu-->
+<div id="mySidenav">
+    <ul class="menu_links">
+        <li><a href="#slide1">Про нас</a>
+            <hr>
+        </li>
+        <li><a href="#slide2">Каталог товарів</a>
+            <hr>
+        </li>
+        <li><a href="#slide3">Партнери</a>
+            <hr>
+        </li>
+        <li><a href="#slide4">Контакти</a>
+            <hr>
+        </li>
+    </ul>
+    <div class="tellnumb" class="">
+        <p><img src="images/tell.png" alt="telephone"/>068 588 55 44</p>
+        <p><img src="images/tell.png" alt="telephone"/>067 496 67 77</p>
+    </div>
+</div>
+<!--Slide 1-->
+<div class="container-fluid" id="slide1">
+    <header class="container-fluid" style="position: relative; background-color: #0f0f0f">
+        <img src="./images/scroll.png" class="scroll" alt="you can scroll this page"/>
+        <!--<div id="title_fon"></div>-->
+        <p class="title"><strong>ГумаАгроТех</strong> - це широкий спектор гумо-технічних
+            виробів та автотранспортного приладдя.<br>
+            <strong>Висока якість</strong> за помірну ціну</p>
+        <div id="slideshow">
+            <div id="slider1"></div>
+        </div>
+    </header>
+</div>
+<!--Slide 2-->
+<div class="container-fluid" id="slide2">
+    <div class="screen_block">
+        <div class="container center" style="position: relative">
+            <p id="catalog">Каталог товарів</p>
+            <p id="catalog2">Каталог товарів</p>
+            <div id="items"></div>
+            <div id="controllers">
+                <span class="prev">  <img src="./images/prev.png" alt="prev"> Назад</span>
+                <span class="next">Вперед   <img src="./images/next.png"  alt="next"/> </span>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+<!--Slide 3-->
+<div class="container-fluid" id="slide3">
+    <div class="screen_block">
+        <div class="container center" style="padding: 0px">
+            <div class="partner_title_block">
+                <p class="partner_title">Наші партнери</p>
+            </div>
+            <div class="partners">
+                <div class="row">
+                    <div class=" col-xs-6  ">
+                        <div class="partner_body">
+                            <div class="partner_logo">
+                                <img src="./images/КиевКартон.png" alt="kiev karton"/>
+                            </div>
+                            <p class="partner_info">
+                                ЧАО "Киевский картонно-бумажный комбинат" - одно из крупнейших предприятий Европы по
+                                выпуску картонно-бумажной продукции, является частью австрийской компании Pulp Mill
+                                Holding. В общем выпуске целлюлозно-бумажной продукции в Украине доля комбината
+                                составляет около 30%.<br> Основным сырьём для производства служит макулатура. Мощность
+                                по переработке вторичного сырья - свыше 850 т в сутки.
+                            </p>
+                            <a id="partn1" target="_blank" href="http://papir.kiev.ua">papir.kiev.ua</a>
+                        </div>
+                    </div>
+                    <div class=" col-xs-6  ">
+                        <div class="partner_body">
+                            <div class="partner_logo">
+                                <img src="./images/РосьГума.png" alt="ros guma"/>
+                            </div>
+                            <p class="partner_info">
+                                Підприємство "Рось-Гума" є великим виробником резино-технічних та латексних виробів, а
+                                також прокладок і ремкомплектів для сільськогосподарської, автомобільної, вантажної і
+                                тракторної техніки,<br> вітчизняного виробництва. Асортимент продукції, що випускається
+                                досить великий і постачається підприємствам різних галузей (автомобілебудування,
+                                сільгоспмашинобудування, переробні підприємства агрокомплексу і т.д)
+                            </p>
+                            <a id="partn2" target="_blank" href="http://ros-guma.com.ua/">ros-guma.com.ua</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="add_partn_block">
+                <a id="showRight" class="add_partner" data-toggle="modal" data-target="#myModal2">стати партнером</a>
+            </div>
+        </div>
+    </div>
+</div>
+<!--Slide 4-->
+<div class="container-fluid " id="slide4">
+    <div class="screen_block" style="background-color: white">
+        <div class="container center" style="padding: 0px">
+            <div class="contacts_block">
+                <div class="row">
+                    <div class="col-xs-6  " id="map_block">
+                        <div id="map">
+                        </div>
+                    </div>
+                    <div class=" col-xs-6 ">
+                        <div class="our_contacts">
+                            <p class="contacts_title">Наші Контакти</p>
+                            <p class="address"><strong>Адреса:</strong> 09100 Україна Київська обл,</p>
+                            <p class="address">м.Біла Церква, вул. Гайок 219а</p>
+                            <p class="tell"><strong>Телефон:</strong> 068 583 55 44, 067 496 67 77</p>
+                            <a class="add_partner" data-toggle="modal" data-target="#myModal3">Зворотній Зв'язок</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <footer class="container-fluid " style="    background-color: rgb( 75, 174, 80 );">
+            <div class="container">
+                <p id="footer_text">© 2016 ГумаАгроТех. Усі права захищені</p>
+            </div>
+        </footer>
+    </div>
+</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<script src="./js/bootstrap.js"></script>
+<!--slider_scroll_menu-->
+<script type="text/javascript" src="//cdn.jsdelivr.net/jquery.slick/1.6.0/slick.min.js"></script>
+<script src="./js/menu_slider.js"></script>
+<!--map init-->
+<script type="text/javascript"
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC8JW5ro1XQJ_DVPzriSmtHtWZ1YYQba-A"></script>
+<script type="text/javascript">
+    google.maps.event.addDomListener(window, 'load', init);
+    function init() {
+        var myLatlng = new google.maps.LatLng(49.8099015, 30.0470461);
+        var mapOptions = {
+            zoom: 15,
+            center: myLatlng,
+            mapTypeControl: false,
+            streetViewControl: false,
+            styles: [{
+                "featureType": "administrative",
+                "elementType": "labels.text.fill",
+                "stylers": [{"color": "#444444"}]
+            }, {
+                "featureType": "administrative.neighborhood",
+                "elementType": "all",
+                "stylers": [{"visibility": "on"}]
+            }, {
+                "featureType": "landscape",
+                "elementType": "all",
+                "stylers": [{"color": "#f2f2f2"}]
+            }, {
+                "featureType": "poi",
+                "elementType": "all",
+                "stylers": [{"visibility": "off"}]
+            }, {
+                "featureType": "poi.attraction",
+                "elementType": "all",
+                "stylers": [{"visibility": "simplified"}]
+            }, {
+                "featureType": "poi.business",
+                "elementType": "all",
+                "stylers": [{"visibility": "off"}]
+            }, {
+                "featureType": "poi.government",
+                "elementType": "all",
+                "stylers": [{"visibility": "on"}]
+            }, {
+                "featureType": "poi.park",
+                "elementType": "all",
+                "stylers": [{"visibility": "on"}]
+            }, {
+                "featureType": "poi.place_of_worship",
+                "elementType": "all",
+                "stylers": [{"visibility": "simplified"}]
+            }, {
+                "featureType": "poi.school",
+                "elementType": "all",
+                "stylers": [{"visibility": "on"}]
+            }, {
+                "featureType": "poi.sports_complex",
+                "elementType": "all",
+                "stylers": [{"visibility": "on"}]
+            }, {
+                "featureType": "road",
+                "elementType": "all",
+                "stylers": [{"saturation": -100}, {"lightness": 45}]
+            }, {
+                "featureType": "road.highway",
+                "elementType": "all",
+                "stylers": [{"visibility": "simplified"}]
+            }, {
+                "featureType": "road.arterial",
+                "elementType": "labels.icon",
+                "stylers": [{"visibility": "off"}]
+            }, {
+                "featureType": "road.local",
+                "elementType": "all",
+                "stylers": [{"visibility": "simplified"}]
+            }, {
+                "featureType": "transit",
+                "elementType": "all",
+                "stylers": [{"visibility": "off"}]
+            }, {
+                "featureType": "transit.line",
+                "elementType": "all",
+                "stylers": [{"visibility": "on"}]
+            }, {
+                "featureType": "transit.line",
+                "elementType": "geometry",
+                "stylers": [{"visibility": "on"}]
+            }, {
+                "featureType": "transit.line",
+                "elementType": "geometry.fill",
+                "stylers": [{"visibility": "on"}]
+            }, {
+                "featureType": "transit.line",
+                "elementType": "geometry.stroke",
+                "stylers": [{"visibility": "on"}]
+            }, {
+                "featureType": "transit.line",
+                "elementType": "labels",
+                "stylers": [{"visibility": "on"}]
+            }, {
+                "featureType": "transit.line",
+                "elementType": "labels.text",
+                "stylers": [{"visibility": "on"}]
+            }, {
+                "featureType": "transit.line",
+                "elementType": "labels.text.fill",
+                "stylers": [{"visibility": "on"}]
+            }, {
+                "featureType": "transit.line",
+                "elementType": "labels.text.stroke",
+                "stylers": [{"visibility": "on"}]
+            }, {
+                "featureType": "transit.line",
+                "elementType": "labels.icon",
+                "stylers": [{"visibility": "on"}]
+            }, {
+                "featureType": "transit.station.bus",
+                "elementType": "all",
+                "stylers": [{"visibility": "on"}]
+            }, {
+                "featureType": "transit.station.bus",
+                "elementType": "geometry",
+                "stylers": [{"visibility": "on"}]
+            }, {
+                "featureType": "transit.station.bus",
+                "elementType": "labels",
+                "stylers": [{"visibility": "on"}]
+            }, {
+                "featureType": "transit.station.bus",
+                "elementType": "labels.icon",
+                "stylers": [{"visibility": "on"}]
+            }, {
+                "featureType": "transit.station.rail",
+                "elementType": "all",
+                "stylers": [{"visibility": "simplified"}]
+            }, {"featureType": "water", "elementType": "all", "stylers": [{"color": "#4bae50"}, {"visibility": "on"}]}]
+        };
+        var mapElement = document.getElementById('map');
+        var map = new google.maps.Map(mapElement, mapOptions);
+
+        var markerImage = new google.maps.MarkerImage(
+                './images/marker.png',
+                new google.maps.Size(110, 33),
+                new google.maps.Point(0, 0),
+                new google.maps.Point(0, 33)
+        );
+
+
+        var marker = new google.maps.Marker({
+            icon: markerImage,
+            position: myLatlng,
+            map: map,
+            title: 'ГумаАгроТех'
+        });
+    }
+</script>
+<!--slider-->
+<script type="text/javascript" src="./js/slider.js"></script>
+</body>
+</html>

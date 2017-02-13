@@ -1,0 +1,18 @@
+User-agent: *
+Allow: /
+Allow: /images/
+Disallow: /js/
+Disallow: /css/
+Disallow: /fonts/
+
+User-agent: Googlebot
+Allow: /
+
+
+User-agent: Yandex
+Allow: /
+Allow: /images/
+Disallow: /js/
+Disallow: /css/
+Disallow: /fonts/
+Host: huma-agroteh.com.ua
